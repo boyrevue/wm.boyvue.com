@@ -1,0 +1,38 @@
+@import '../../../style/vars.less';
+
+.modal-earning {
+  width: 620px !important;
+  text-align: center;
+  font-weight: 600;
+
+
+  :global .modal-earning-item {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+    p {
+      margin: 0;
+    }
+
+    .modal-earning-item__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+
+      h4,
+      p {
+        margin: 0;
+        color: @primary-color;
+      }
+    }
+
+    .ant-divider-horizontal {
+      margin: 0;
+    }
+
+    .modal-earning-item__desc {
+      font-size: 0.6rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

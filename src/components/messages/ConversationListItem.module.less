@@ -1,0 +1,139 @@
+@import '../../../style/vars.less';
+
+.conversation-list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+
+.conversation-left-corner {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.conversation-left-corner span {
+  font-size: 12px;
+}
+
+.conversation-list-item {
+  :global .online {
+    position: absolute;
+    left: -3px;
+    top: 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: @success-color;
+
+    .active {
+      display: block;
+      background-color: @light-grey;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      animation: blink 1s linear infinite;
+      opacity: 0.7;
+    }
+  }
+  :global .conversation-snippet {
+    margin: 0;
+  }
+}
+
+.conversation-list-item:hover {
+  background: @light-grey;
+  cursor: pointer;
+}
+
+.conversation-list-item.active {
+  background: @light-grey;
+}
+
+.conversation-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.conversation-title {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+
+.conversation-snippet {
+  font-size: 12px;
+  color: var(--color-white);
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.conversation-time {
+  font-size: 12px;
+  color: @dark-grey;
+  margin: 0;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+}
+
+.conversation-top-right {
+  position: absolute;
+  right: 0;
+  font-size: 16px;
+  z-index: 1;
+  cursor: pointer;
+  margin: 0 5px;
+  border: unset;
+  top: 50%;
+  transform: translate(0%, -50%);
+  background-color: unset;
+  box-shadow: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: unset;
+    color: @light-grey;
+  }
+}
+
+
+.conversation-top-right-unpin {
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  z-index: 1;
+  cursor: pointer;
+  margin: 0 5px;
+  border: unset;
+  top: 50%;
+  transform: translate(0%, -50%);
+  background-color: unset;
+  ;
+
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: unset;
+    color: @light-grey;
+  }
+}
+
+.group-conversation {
+  position: relative;
+}

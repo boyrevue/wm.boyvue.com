@@ -1,0 +1,122 @@
+@import '../../../style/vars.less';
+
+.account-form {
+  :global .ant-form-item {
+    margin-bottom: 5px;
+
+    .ant-input {
+      height: 40px;
+    }
+    .ant-input-affix-wrapper {
+      padding: 0 10px;
+    }
+    textarea.ant-input {
+      min-height: 100px;
+    }
+
+    .ant-picker {
+      min-height: 40px;
+    }
+
+    .ant-select-selector {
+      border-radius: 5px;
+      min-height: 40px;
+      font-size: 13px;
+      padding: 0 12px;
+
+    }
+
+    .ant-select-selection-item {
+      line-height: 3;
+      height: auto;
+    }
+
+    .ant-form-item-label {
+      padding: 0 5px;
+
+      label {
+        font-size: 13px;
+        height: auto;
+      }
+    }
+
+    .phone-code {
+      .ant-select-selection-item, .ant-select-selector {
+        min-width: 160px;
+        max-width: 200px;
+      }
+    }
+  }
+
+  :global .ant-input-number-input-wrap {
+    input {
+      background-color: @light-blue;
+      border: 1px solid @light-blue;
+      border-radius: 0.5em;
+      height: 40px;
+      border-radius: 5px;
+      height: 40px;
+      font-size: 13px;
+      padding: 5px 12px;
+    }
+  }
+
+  :global .ant-form-item-explain {
+    text-align: center;
+    font-size: 12px;
+
+    .ant-form-item-explain-error {
+      color: #f04134;
+    }
+  }
+  :global .phone-code {
+    // .ant-input-group-addon {
+    //   width: 70%;
+    // }
+    // .ant-input {
+    //   width: 30%;
+    // }
+  }
+}
+
+@media screen and (max-width: @mobile-screen) {
+  .account-form {
+    .phone-code {
+      .ant-input-group {
+        display: block;
+
+        .ant-input-group-addon {
+          min-width: 100% !important;
+          max-width: 100% !important;
+          width: 100% !important;
+          border-right: 1px solid #e5e5e5 !important;
+          display: block;
+        }
+      }
+
+      .ant-input {
+        border-radius: 0.5em;
+      }
+    }
+  }
+}
+
+.top-profile {
+  // background-size: cover;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  // height: 200px;
+  padding-top: 30%;
+  margin-bottom: 25px;
+
+  :global .avatar-upload {
+    position: absolute;
+    left: 5%;
+    bottom: -30px;
+
+    .ant-upload-select.ant-upload-select-picture-card {
+      background-image: url('/no-avatar.png');
+    }
+  }
+}

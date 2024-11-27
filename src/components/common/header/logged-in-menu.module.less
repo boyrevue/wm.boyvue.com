@@ -1,0 +1,153 @@
+@import '../../../../style/vars.less';
+
+.mid-conner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @media screen and (max-width: @mobile-screen) {
+    padding: 0;
+  }
+}
+
+.nav-icons {
+  display: flex;
+  margin: 0 10px;
+  padding: 0;
+  @media screen and (max-width: @mobile-screen) {
+    margin: 0 5px;
+    margin-right: 30px;
+
+  }
+  > li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 7px;
+    @media screen and (max-width: @mobile-screen) {
+      margin: 0 3px;
+    }
+  }
+  :global li {
+    .ant-badge-count {
+      background: @orange-color;
+      font-size: 11px;
+      box-shadow: none;
+      padding: 0 5px;
+      line-height: 20px;
+      min-width: 20px;
+      height: 20px;
+    }
+
+    
+
+   > a, .ant-dropdown-trigger {
+      white-space: nowrap;
+      color: @dark-grey;
+      font-size: 20px;
+      padding: 5px 7px;
+      background-color: @light-grey;
+      border-radius: 5px;
+      &:hover {
+        color: @primary-color;
+      }
+    }
+
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    .anticon {
+      font-size: 20px;
+
+      &.anticon-custom {
+        font-size: 22px;
+      }
+    }
+
+    .cart-total {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+    }
+
+    .ant-menu.ant-menu-light {
+      background-color: @primary-color;
+    }
+
+    &.custom {
+      .anticon {
+        display: none;
+      }
+    }
+
+    &.custom-performer {
+      margin-left: 0px;
+      margin-top: 6px;
+      margin-right: -10px;
+
+      .anticon {
+        display: block;
+        margin-bottom: 11px;
+      }
+
+      @media (max-width: @mobile-screen) {
+        margin-right: -30px;
+        margin-top: 4px;
+        margin-bottom: -2px;
+      }
+
+      @media (max-width: 420px) {
+        margin-right: 40px;
+        margin-bottom: 0;
+        margin-left: 5px;
+
+        .anticon {
+          margin-top: 3px;
+          margin-bottom: 7px;
+          margin-left: 1px;
+        }
+      }
+    }
+  }
+  :global .right-menu {
+    padding: 0;
+
+    .ant-menu-submenu-title {
+      padding: 0;
+    }
+  }
+
+  :global .active {
+    color: var(--color-white);
+    border-bottom: 2px solid;
+  }
+
+  @media (max-width: @mobile-screen) {
+    &.custom {
+      justify-content: flex-end;
+    }
+
+    :global .hide {
+      display: none;
+    }
+
+    :global li {
+      .cart-total {
+        top: 0px;
+        right: -2px;
+      }
+
+      &.custom {
+        .anticon {
+          display: block;
+        }
+
+        .hide {
+          display: none;
+        }
+      }
+    }
+  }
+}

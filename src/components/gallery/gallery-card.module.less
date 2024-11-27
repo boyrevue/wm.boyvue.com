@@ -1,0 +1,117 @@
+@import '../../../style/vars.less';
+
+.photo-card {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .05);
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  padding-top: 75%;
+  margin-bottom: 33px;
+  background-image: url('/placeholder-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  :global .play-ico {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    .anticon {
+      font-size: 30px;
+      color: var(--color-white);
+      transition: 0.3s;
+    }
+  }
+
+  :global .photo-stats {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    color: #fff;
+    font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+
+    .like {
+      @media screen and (max-width: @mobile-screen) {
+        display: none;
+      }
+      span {
+        margin-right: 8px;
+
+        &.anticon {
+          margin-right: 0;
+        }
+      }
+    }
+
+    @media screen and (max-width: @mobile-screen) {
+      font-size: 12px;
+    }
+  }
+
+  :global .photo-info {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    font-weight: bold;
+    padding: 8px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: @primary-color;
+    color: var(--color-white);
+    text-align: center;
+    a {
+      color: var(--color-white);
+    }
+
+    @media screen and (max-width: @mobile-screen) {
+      font-size: 11px;
+    }
+  }
+
+  :global .photo-price {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  :global .label-price {
+    color: var(--color-white);
+    background-color: @primary-color;
+    padding: 3px 13px;
+    clip-path: polygon(0px 0px, 0px 100%, 100% 100%, 90% 50%, 100% 0);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    @media screen and (max-width: @mobile-screen) {
+      font-size: 12px;
+      padding: 3px 10px 3px 7px;
+    }
+  }
+
+  &:hover {
+    :global .play-ico {
+      .anticon {
+        color: @theme-color;
+      }
+    }
+  }
+
+  @media screen and (max-width: @mobile-screen) {
+    height: 140px;
+  }
+}

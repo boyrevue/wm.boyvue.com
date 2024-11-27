@@ -1,0 +1,123 @@
+@import '../../../style/vars.less';
+
+.prd-card {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .05);
+  position: relative;
+  overflow: hidden;
+
+  :global .prd-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    .ant-btn.primary {
+      width: 100%;
+      border-radius: 0;
+      border: none;
+      opacity: 1;
+      transition: all 0.5s ease-in-out;
+      font-size: 13px;
+      padding: 5px;
+      &:hover {
+        background-color: @secondary-color
+      }
+    }
+
+    @media screen and (max-width: @mobile-screen) {
+
+      .ant-btn.primary,
+      .ant-btn.secondary {
+        min-height: 32px;
+        height: 32px;
+        padding: 2px;
+        font-size: 9px;
+
+        .anticon+span,
+        .ant-btn>span+.anticon {
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+
+  :global .label-wrapper {
+    position: absolute;
+    right: auto;
+    left: 0px;
+    top: 5px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    .label-wrapper-price,
+    .label-wrapper-digital {
+      color: var(--color-white);
+      background-color: @dark-grey;
+      clip-path: polygon(0px 0px, 0px 100%, 100% 100%, 90% 50%, 100% 0);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 13px;
+      margin-bottom: 5px;
+
+      @media screen and (max-width: @mobile-screen) {
+        font-size: 12px;
+        margin: 1px 0;
+      }
+    }
+
+    .label-wrapper-digital {
+      background-color: @primary-color;
+    }
+  }
+}
+
+.prd-thumb {
+  padding-top: 75%;
+  position: relative;
+  img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.no-of-images {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: var(--color-white);
+  font-size: 13px;
+  z-index: 0;
+
+  @media screen and (max-width: @mobile-screen) {
+    font-size: 12px;
+  }
+}
+
+.prd-info {
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  padding: 5px 10px;
+  color: var(--color-white);
+  position: absolute;
+  bottom: 40px;
+  background-image: linear-gradient(to bottom, #9a9a9a00 0%, #292929 100%);
+  z-index: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 15px;
+  text-align: center;
+  text-transform: capitalize;
+
+  @media screen and (max-width: @mobile-screen) {
+    bottom: 32px;
+    font-size: 14px;
+  }
+}

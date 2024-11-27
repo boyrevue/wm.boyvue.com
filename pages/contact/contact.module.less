@@ -1,0 +1,107 @@
+@import '../../style/vars';
+
+.contact-box {
+    max-width: 1100px;
+    margin: 15px auto;
+
+    :global .contact-form {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    [class~="title"] {
+        font-size: 24px;
+        font-weight: bolder;
+        margin: 20px 0;
+        text-align: center;
+        font-weight: bold;
+        color: @theme-color;
+    }
+
+    :global .contact-content {
+        padding-top: 130px;
+        @media (max-width: @mobile-screen) {
+            padding-top: 10px;
+        }
+    }
+
+    :global .ant-form-item-explain {
+        text-align: center;
+        font-size: 12px;
+
+        .ant-form-item-explain-error {
+            color: #f04134;
+        }
+    }
+}
+
+.contactContent {
+    padding: 20px 0;
+    position: relative;
+    min-height: 550px;
+    margin: 0 auto;
+    max-width: 1100px;
+
+    @media (max-width: @mobile-screen) {
+        padding: unset;
+
+        &.contact-content {
+            padding: 10px;
+            min-height: unset;
+        }
+    }
+
+    ul {
+        li {
+            font-weight: 600;
+            padding: 5px 5px 5px 10px;
+        }
+    }
+
+    //model
+    &.left {
+        background-image: url('/ct-bg.jpg');
+        background-size: 90%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @media (max-width: @mobile-screen) {
+            display: none;
+        }
+
+        &.fixed {
+            background-size: 70%;
+        }
+    }
+
+    //member
+    &.right {
+        button.login-form-button {
+            width: 100%;
+            background-image: linear-gradient(0deg, @primary-color, @theme-color);
+            border-color: @theme-color;
+            color: var(--color-white);
+        }
+
+        [class~="title"] {
+            h3 {
+                margin-top: 30px;
+                font-size: 28px;
+                font-weight: 700;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+
+        a {
+            font-weight: 600;
+            color: @theme-color
+        }
+
+        :global .btn-primary.ant-btn {
+            color: var(--color-white);
+            background-image: linear-gradient(0deg, @primary-color, @theme-color);
+            box-shadow: 0 5px 10px rgba(50, 50, 50, 0.2);
+        }
+    }
+}

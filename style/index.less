@@ -1,0 +1,52 @@
+@import '../node_modules/antd/dist/antd.less';
+@import './vars.less';
+@import './default.less';
+@import './global.less';
+@import './responsive.less';
+@import './videojs.less';
+@import './app.less';
+
+
+@import 'suneditor/dist/css/suneditor.min.css'; // Import Sun Editor's CSS File
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-white);
+  color: @text-color;
+  font-size: 14px;
+  line-height: 23px;
+  font-family: 'Roboto', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.block-ip-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .ant-result {
+    .ant-result-title {
+      font-size: 74px;
+    }
+
+    .ant-result-subtitle {
+      font-size: 24px;
+    }
+  }
+}
+
+.sun-editor-editable {
+  background-color: transparent !important;
+}

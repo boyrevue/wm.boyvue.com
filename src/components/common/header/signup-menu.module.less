@@ -1,0 +1,147 @@
+@import '../../../../style/vars.less';
+
+.nav-icons {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  :global li {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+
+    .ant-badge-count {
+      background: @orange-color;
+      font-size: 11px;
+      box-shadow: none;
+      padding: 0 5px;
+      line-height: 20px;
+      min-width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      .ant-badge-count {
+        opacity: 0.7;
+      }
+
+      a {
+        color: @primary-color;
+      }
+
+      border-color: @primary-color;
+    }
+
+    a {
+      white-space: nowrap;
+      color: @dark-grey;
+      font-family: 'Avenir';
+      font-size: 13px;
+    }
+
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    .anticon {
+      margin: 5px;
+      font-size: 20px;
+
+      &.anticon-custom {
+        font-size: 22px;
+      }
+    }
+
+    .cart-total {
+      position: absolute;
+      top: 2px;
+      right: 5px;
+    }
+
+    .ant-menu.ant-menu-light {
+      background-color: @primary-color;
+    }
+
+    &.custom {
+      .anticon {
+        display: none;
+      }
+    }
+
+    &.custom-performer {
+      margin-left: 0px;
+      margin-top: 6px;
+      margin-right: -10px;
+
+      .anticon {
+        display: block;
+        margin-bottom: 11px;
+      }
+
+      @media (max-width: @mobile-screen) {
+        margin-right: -30px;
+        margin-top: 4px;
+        margin-bottom: -2px;
+      }
+
+      @media (max-width: 420px) {
+        margin-right: 40px;
+        margin-bottom: 0;
+        margin-left: 5px;
+
+        .anticon {
+          margin-top: 3px;
+          margin-bottom: 7px;
+          margin-left: 1px;
+        }
+      }
+    }
+  }
+
+  :global .right-menu {
+    padding: 0;
+
+    .ant-menu-submenu-title {
+      padding: 0;
+    }
+  }
+
+  :global .active {
+    color: var(--color-white);
+    border-bottom: 2px solid;
+  }
+
+  @media (max-width: @mobile-screen) {
+    width: 100%;
+    justify-content: space-around;
+
+    &.custom {
+      justify-content: flex-end;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    li {
+      padding: 5px 10px;
+
+      .cart-total {
+        top: 0px;
+        right: -2px;
+      }
+
+      &.custom {
+        .anticon {
+          display: block;
+        }
+
+        .hide {
+          display: none;
+        }
+      }
+    }
+  }
+}

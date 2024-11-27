@@ -1,0 +1,48 @@
+@import '../../../style/vars.less';
+.messenger {
+  display: flex;
+  width: 100%;
+  position: relative;
+  border: 1px solid #ddd;
+}
+
+.scrollable {
+  position: relative;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sidebar {
+  display: flex;
+  width: 30%;
+}
+
+.chat-content {
+  display: flex;
+  width: 70%;
+  position: relative;
+  padding-top: 58px;
+  padding-bottom: 63px;
+  height: calc(100vh - 174px);
+  min-height: 464px;
+}
+
+.footer {
+  background: var(--bg-white);
+}
+
+@media all and (max-width: @mobile-screen) {
+  .sidebar {
+    width: 100% !important;
+  }
+  .sidebar.active {
+    display: none;
+  }
+  .chat-content {
+    display: none;
+  }
+  .chat-content.active {
+    display: flex;
+    width: 100%;
+  }
+}

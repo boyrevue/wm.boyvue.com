@@ -1,0 +1,156 @@
+@import '../../../style/default.less';
+
+
+.compose {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: none;
+  @media screen and (max-width: @mobile-screen) {
+    bottom: 0;
+    top: auto;
+    width: calc(100% + 60px);
+    background-color: transparent;
+  }
+  .compose-box {
+    width: 100%;
+    position: relative;
+    
+    .compose-input {
+      flex: 1;
+      padding: 7px 10px;
+      padding-right: 30px;
+      font-size: 14px;
+      height: 35px;
+      background: none;
+      color: #333;
+      outline: thin;
+      border-radius: 20px;
+      background-color: #eee;
+      border: 0;
+    }
+    .grp-emotions {
+      position: absolute;
+      right: 4px;
+      top: 3px;
+      .send-emotion-btn {
+        font-size: 20px;
+        padding: 0 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+      }
+      
+      :global .anticon {
+        font-size: 22px;
+      }
+      :global .picker-react {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 120%;
+        z-index: 9999;
+        &.showEmotion {
+          display: block;
+        }
+      }
+      .anticon-smile {
+        font-size: 20px;
+      }
+    }
+  }
+  .grp-icons {
+    white-space: nowrap;
+    .hidden {
+      display: none;
+    }
+    .grp-send-btn {
+      cursor: pointer;
+      position: relative;
+      background-color: @primary-color;
+      height: 35px;
+      line-height: 35px;
+      border-radius: 50%;
+      text-align: center;
+      color: #fff;
+      margin-left: 5px;
+      padding: 2px 7px 0px 11px;
+      font-size: 17px;
+    }
+    :global .ant-btn {
+      padding: 7px 15px;
+      border-radius: 30px;
+      width: auto;
+      margin-left: 5px;
+      min-height: auto;
+      @media screen and (max-width: @mobile-screen) {
+        display: inline-block !important;
+      }
+    }
+    :global .focused {
+      .ant-btn {
+        display: none !important;
+      }
+    }
+  }
+}
+
+
+
+
+.grp-file-icon {
+  background: url('/gallery.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 28px;
+  width: 28px;
+
+  .avatar-uploader {
+    opacity: 0;
+
+    .ant-upload {
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      border: none;
+      margin: 0;
+
+      img {
+        width: 20px !important;
+        height: 20px;
+        object-fit: cover;
+      }
+    }
+
+    .ant-upload-text {
+      display: none;
+    }
+  }
+}
+
+.user-custom {
+  .compose {
+    border: none;
+    border-top: 1px solid #ff0065;
+    background: transparent;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    .compose-input {
+      color: #333;
+
+      &::placeholder {
+        color: #000;
+      }
+    }
+  }
+}
+

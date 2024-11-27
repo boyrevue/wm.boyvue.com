@@ -1,0 +1,81 @@
+@import '../../../style/vars.less';
+
+.f-upload-list {
+  width: 100%;
+
+  :global .f-upload-item {
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 5px;
+    margin: 5px;
+    background-color: @light-blue;
+    position: relative;
+    width: 120px;
+    display: inline-block;
+    @media screen and (max-width: @tablet-screen) {
+      width: calc(50% - 10px);
+      text-align: center;
+    }
+    .f-remove {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      .ant-btn {
+        padding: 3px 10px;
+      }
+    }
+
+    .f-upload-thumb {
+      height: 100px;
+
+      .f-thumb-vid {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--bg-white);
+
+        .anticon {
+          color: @theme-color;
+          font-size: 22px;
+        }
+      }
+    }
+
+    .f-upload-name {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 120px;
+      span {
+        display: block;
+      }
+    }
+
+    .f-upload-size {
+      font-size: 8px;
+    }
+  }
+
+  :global .add-more {
+    align-self: center;
+    justify-content: center;
+    background-color: @light-grey;
+    border-radius: 5px;
+    display: inline-block;
+    &:hover {
+      opacity: 0.8;
+    }
+
+    cursor: pointer;
+
+    .ant-upload {
+      padding: 10px;
+      .anticon {
+        font-size: 15px;
+      }
+    }
+  }
+}

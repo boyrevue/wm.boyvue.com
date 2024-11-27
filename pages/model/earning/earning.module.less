@@ -1,0 +1,19 @@
+@import '../../../style/vars.less';
+
+.statistic-earning {
+  text-align: center;
+  margin: 10px 0;
+    :global {
+        .ant-statistic-title {
+          @media screen and (max-width: @mobile-screen) {
+            font-size: 12px;
+            line-height: 15px;
+          }
+        }
+        .ant-statistic-content {
+          @media screen and (max-width: @mobile-screen) {
+            font-size:18px;
+          }
+        }
+    }
+}

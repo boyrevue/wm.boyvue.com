@@ -1,0 +1,70 @@
+@import '../../../style/vars.less';
+
+.comment-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  :global .cmt-user {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    @media screen and (max-width: @mobile-screen) {
+      display: none;
+    }
+  }
+
+  :global .cmt-area {
+    padding: 0 10px;
+    width: 100%;
+    position: relative;
+
+    .ant-form-item {
+      margin: 0
+    }
+
+    .ant-input {
+      background: @light-grey;
+      padding: 5px 15px;
+      padding-right: 30px;
+      border: none;
+      height: 50px;
+      min-height: unset;
+    }
+
+    .grp-emotions {
+      position: absolute;
+      right: 25px;
+      top: 15px;
+
+      .anticon {
+        font-size: 22px;
+        color: @primary-color;
+      }
+    }
+  }
+
+  :global .submit-btn {
+    background-image: linear-gradient(0deg, @theme-color, @primary-color);
+    color: var(--color-white);
+    box-shadow: 0 5px 10px rgba(50, 50, 50, 0.2);
+    padding: 0.7em 2em;
+    font-size: 0.9em;
+    font-weight: 600;
+    border-radius: 0.5em;
+    height: 52px;
+
+    .anticon-send {
+      font-size: 18px;
+      transform: rotate(-45deg);
+    }
+  }
+}

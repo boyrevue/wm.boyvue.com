@@ -1,0 +1,28 @@
+
+  .nav-brand__wrapper {
+    width: 20em;
+  }
+
+  .nav-brand {
+    width: 100% !important;
+  }
+
+  .nav-logo {
+    font-size: 1.5em;
+  }
+
+  .vertical-header {
+    max-width: 50em;
+  }
+
+  .falling-card {
+    width: 30em;
+  }
+
+  .max-width {
+    width: 100%;
+  }
+
+  .text-center {
+    text-align: center;
+  }

@@ -1,0 +1,71 @@
+@import '../../style/default.less';
+
+.gal-stats {
+  color: @dark-grey;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.photo-carousel {
+  margin: 15px 0;
+
+  :global .list-photos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    min-height: 200px;
+
+    .photo-card {
+      position: relative;
+      width: 12.5%;
+
+      @media (max-width: @mobile-screen) {
+        width: 20%;
+      }
+
+      .ant-image {
+        width: 100%;
+        padding: 2px;
+        overflow: hidden;
+      }
+
+      .purchase-block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        text-align: center;
+        background: #e5e5e56e;
+        color: #fff;
+
+        .anticon-lock {
+          font-size: 20px;
+        }
+      }
+
+      &.blur {
+        img {
+          filter: blur(5px);
+        }
+      }
+    }
+
+    .subscription-block {
+      position: absolute;
+      padding: 10px;
+      background: rgba(200, 200, 200, .5);
+      border: 1px solid @gray;
+      border-radius: 3px;
+    }
+  }
+}

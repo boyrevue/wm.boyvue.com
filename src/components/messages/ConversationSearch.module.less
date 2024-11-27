@@ -1,0 +1,48 @@
+@import '../../../style/vars.less';
+
+.conversation-search {
+  position: relative;
+  border-bottom: 1px solid var(--light-grey-border);
+  padding: 10px;
+  .conversation-search-box {
+    position: relative;
+    input {
+      border: none;
+      outline: none;
+      background: none;
+      border-radius: 0;
+      margin: 0;
+      width: 100%;
+      padding: 7px 7px 7px 38px;
+      background-color: @light-grey;
+      border-radius: 5px;
+      &::placeholder {
+        text-align: left;
+      }
+  }
+ 
+  }
+
+  :global .anticon-search {
+    font-size: 20px;
+    position: absolute;
+    top: calc(50% - 9px);
+    left: 10px;
+  }
+}
+
+.conversation-search-input {
+  background: @light-grey;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+.conversation-search-input::placeholder {
+  text-align: center;
+}
+
+.conversation-search-input:focus::placeholder {
+  text-align: left;
+}

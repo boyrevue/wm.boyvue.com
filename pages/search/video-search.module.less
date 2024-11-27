@@ -1,0 +1,55 @@
+@import '../../style/vars.less';
+
+.search-lg-top {
+  position: relative;
+  float: right;
+  @media screen and (max-width: @mobile-screen) { 
+    float: none;
+  }
+  :global .ant-input-search-button {
+    height: 40px;
+    width: auto;
+  }
+
+  :global .ant-input-search {
+    .ant-input {
+      height: 40px;
+    }
+
+    .ant-input-group-wrapper {
+      overflow: hidden;
+    }
+
+    .ant-input-affix-wrapper {
+      box-shadow: none;
+      border-radius: 0;
+    }
+
+    .ant-input-group-addon {
+      .ant-input-search-button {
+        border-radius: 0;
+      }
+    }
+  }
+
+}
+.top-video {
+  overflow: hidden;
+  margin: 15px 0;
+  @media screen and (max-width: @mobile-screen) { 
+    margin: 10px 0;
+  }
+  :global {
+    .ant-page-header-heading {
+      margin-bottom: 0;
+    }
+    .ant-page-header {
+      float: left;
+      padding: 0;
+      margin: 0;
+      @media screen and (max-width: @mobile-screen) { 
+        float: none;
+      }
+    }
+  }
+}

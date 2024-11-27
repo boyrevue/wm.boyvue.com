@@ -1,0 +1,130 @@
+@import '../../../style/vars.less';
+
+.model-card {
+  width: 100%;
+  :global .card-top {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .img-cover {
+      padding-top: 64%;
+      border-radius: 10px 10px 0 0;
+    }
+    .card-top-lable {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 3px 10px 3px 5px;
+      border-radius: 30px;
+      color: var(--color-white);
+      font-size: 13px;
+      @media screen and (max-width: @mobile-screen) {
+        top: 7px;
+        left: 5px;
+      }
+      .anticon {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: var(--color-white);
+        background-color: @primary-color;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+    }
+    
+  }
+  :global .card-bottom {
+    width: 100%;
+    padding: 10px 6px;
+    position: relative;
+    background-color: @primary-color;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    a {
+      color: @dark-grey;
+      display: block;
+      color: var(--color-white);
+    }
+    h3 {
+      font-size: 15px;
+      display: inline-block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: calc(100% - 50px);
+      vertical-align: middle;
+      margin: 0;
+      padding: 0;
+      color: var(--color-white);
+      font-weight: bold;
+    }
+    .anticon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 2px;
+    }
+    .status-model {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+      .online-status {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: @offline-status-color;
+        &.active {
+          background-color: @success-color;
+          opacity: 1;
+        }
+
+      }
+    }
+  }
+  :global .card-top-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    @media screen and (max-width: @mobile-screen) {
+      right: auto;
+      top: 39px;
+      left: 5px;
+    }
+    > div {
+      padding: 0 7px;
+      font-size: 13px;
+      border-radius: 20px;
+      color: var(--color-white);
+      @media screen and (max-width: @mobile-screen) {
+        font-size: 12px;
+      }
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &:before {
+        content: ' ';
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--bg-white);
+        opacity: 0.7;
+        animation: opacity 2s infinite;
+      }
+      
+      &.live-status {
+        background-color: @highlight-color;
+      }
+      &.private-status {
+        background-color: @warning-color;
+      }
+    }
+  }
+}

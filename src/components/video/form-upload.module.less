@@ -1,0 +1,51 @@
+@import '../../../style/vars.less';
+
+
+.account-form {
+  :global .ant-form-item {
+      margin-bottom: 5px;
+
+      .ant-input {
+        height: 40px;
+      }
+
+      textarea.ant-input {
+        min-height: 100px;
+      }
+
+      .ant-picker {
+        min-height: 40px;
+      }
+
+      .ant-select-selector {
+        border-radius: 5px;
+        min-height: 40px;
+        font-size: 13px;
+        padding: 0 12px;
+
+      }
+
+      .ant-select-selection-item {
+        line-height: 3;
+        height: auto;
+      }
+
+      .ant-form-item-label {
+        padding: 0 5px;
+
+        label {
+          font-size: 12px;
+          height: auto;
+        }
+      }
+    }
+
+  :global .ant-form-item-explain {
+    text-align: center;
+    font-size: 12px;
+
+    .ant-form-item-explain-error {
+      color: #f04134;
+    }
+  }
+}

@@ -1,0 +1,164 @@
+@import '../../../style/vars.less';
+.message {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @media screen and (max-width: @mobile-screen) {
+    color: #fff;
+    p {
+      text-align: left !important;
+      margin: 7px 0 0 0 ;
+     }
+  }
+}
+
+.message .timestamp {
+  display: flex;
+  justify-content: flex-start;
+  color: @grey-color;
+  font-size: 12px;
+  padding-left: 34px;
+  @media screen and (max-width: @mobile-screen) {
+    color: #fff;
+    display: none;
+  }
+}
+
+.message.mine .timestamp {
+  justify-content: flex-end;
+  padding-left: 0;
+  padding-right: 34px;
+  @media screen and (max-width: @mobile-screen) {
+    padding: 0;
+    justify-content: left;
+  }
+}
+.message {
+  .bubble-container {
+    font-size: 14px;
+    display: flex;
+    :global {
+      .ant-dropdown-trigger{
+        opacity: 0;
+        padding: 10px;
+        margin-right:-5px ;
+        cursor: pointer;
+        order: -1;
+        @media screen and (max-width: @mobile-screen) {
+          order: 0;
+        }
+      }
+      .u-name {
+        font-weight: bold;
+        .anticon-crown{
+          margin-right: 3px;
+        }
+      }
+      .avatar-sender {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+    }
+    &:hover {
+      :global .ant-dropdown-trigger{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.message.mine .bubble-container {
+  justify-content: flex-end;
+  :global .avatar-sender {
+    order: 1;
+    margin: 0 0 0 5px;
+  }
+  @media screen and (max-width: @mobile-screen) {
+    justify-content: left;
+    :global .avatar-sender {
+      order: 0;
+      margin: 0 5px 0 0 ;
+    }
+  }
+}
+
+// .message.start .bubble-container .bubble {
+//   /* margin-top: 10px; */
+//   border-top-left-radius: 20px;
+// }
+
+// .message.end .bubble-container .bubble {
+//   border-bottom-left-radius: 20px;
+//   /* margin-bottom: 10px; */
+// }
+
+// .message.mine.start .bubble-container .bubble {
+//   margin-top: 10px;
+//   border-top-right-radius: 20px;
+// }
+
+// .message.mine.end .bubble-container .bubble {
+//   border-bottom-right-radius: 20px;
+//   margin-bottom: 10px;
+// }
+
+.message .bubble-container .bubble {
+  margin: 3px 0px;
+  background: @light-grey;
+  padding: 7px 10px;
+  border-radius: 0 10px 10px 10px;
+  max-width: 75%;
+  overflow-wrap: break-word;
+  @media screen and (max-width: @mobile-screen) {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+
+.message.mine .bubble-container .bubble {
+  background: @light-color;
+  max-width: 75%;
+  color: @black;
+  overflow-wrap: break-word;
+  border-radius: 10px 0 10px 10px;
+  @media screen and (max-width: @mobile-screen) {
+    border-radius: 0 10px 10px 10px;
+    background-color: rgb(92 69 143 / 70%);
+    border: 0;
+    color: #fff;
+  }
+}
+.message.tip .bubble-container {
+  display: block;
+  .bubble  {
+    text-align: center;
+    background: transparent;
+    max-width: 100%;
+    background: @light-grey;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 5px 0;
+    @media screen and (max-width: @mobile-screen) {
+      background-color:rgb(125 125 125 / 50%);
+      text-align: left;
+    }
+  }
+}
+
+.message-time {
+  font-size: 12px;
+  margin: 0;
+}
+
+.bubble-container .avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin: 6px 8px 0 0;
+}
+.message.mine .bubble-container .avatar {
+  margin: 6px 0 0 8px;
+}

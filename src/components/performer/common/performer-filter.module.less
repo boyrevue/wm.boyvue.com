@@ -1,0 +1,159 @@
+@import '../../../../style/vars.less';
+
+.filter-block {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0 0 20px 0;
+  @media screen and (max-width: @tablet-screen) {
+    display: block;
+  }
+  :global {
+    .left-filter {
+      display: flex;
+      position: relative;
+      @media screen and (max-width: @tablet-screen) {
+        display: block;
+        margin-bottom: 10px;
+      } 
+      .filter-item {
+        margin-right: 10px;
+        @media screen and (max-width: @tablet-screen) {
+          margin: 0; 
+        }
+        &.last {
+          @media screen and (max-width: @tablet-screen) {
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+        }  
+      }
+    }
+    .right-filter{
+      display: flex;
+      margin-left: auto;
+      position: relative;
+      .ant-select {
+        min-width: 200px;
+        @media screen and (max-width: @tablet-screen) {
+          min-width: auto;
+          width: 100%;
+        }
+      }
+      .filter-item {
+        margin-left: 10px;
+        &:first-child {
+          @media screen and (max-width: @tablet-screen) {
+            margin: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+    input,
+    .ant-input {
+      height: 40px;
+      background-color: var(--bg-white);
+      border: 1px solid @border-select;
+      border-radius: 3px;
+    }
+    
+    .ant-select-selector {
+      font-weight: 400;
+      color: @black;
+      background-color: var(--bg-white);
+      background-clip: padding-box;
+      border: 1px solid @border-select;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+      padding: 5px 11px;
+      min-height: 40px;
+  
+      .ant-select-selection-item {
+        line-height: 3;
+      }
+    }
+  
+    button {
+      height: 40px;
+    }
+  
+    .ant-picker.ant-picker-range {
+      height: 40px;
+  
+      input,
+      .ant-input {
+        height: 32px;
+        border: none
+      }
+    }
+    .ant-btn.primary {
+      padding: 0 10px;
+      .anticon {
+        font-size: 17px;
+        vertical-align: middle;
+        display: none;
+        @media screen and (max-width: @tablet-screen) {
+          display: block;
+        }
+        
+      }
+      span {
+        &:last-child {
+          @media screen and (max-width: @tablet-screen) {
+            display: none;
+          }
+        }
+      }
+    }
+    .filter-sort {
+      .ant-select-selection-item {
+        span:last-child {
+          @media screen and (max-width: @tablet-screen) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+.modal-advanced-search {
+  :global {
+    .ant-modal-body {
+      padding: 10px 20px;
+      max-height: calc(100vh - 220px);
+      overflow: auto;
+    }
+    .filter-item {
+      margin: 3px 0;
+      .title-filter {
+        margin-bottom: 5px;
+        display: block;
+        font-weight: bold;
+      }
+    }
+    input,
+    .ant-input {
+      height: 40px;
+      background-color: var(--bg-white);
+      border: 1px solid @border-select;
+      border-radius: 3px;
+    }
+  
+    .ant-select-selector {
+      font-weight: 400;
+      color: @black;
+      background-color: var(--bg-white);
+      background-clip: padding-box;
+      border: 1px solid @border-select;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+      padding: 5px 11px;
+      min-height: 40px;
+  
+      .ant-select-selection-item {
+        line-height: 3;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import '../../../../style/vars.less';
+
+.cookie-policy {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--bg-white);
+  z-index: 99;
+  :global {
+    .cookie-box {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 15px;
+    }
+    .cookie-content {
+      width: 100%;
+      max-height: 120px;
+      overflow: auto;
+      padding: 5px 15px;
+      border-radius: 3px;
+      border: 1px solid @gray;
+      .sun-editor-editable {
+        padding: 0;
+      }
+    }
+    .accept-btn {
+      margin-left: 5px;
+      min-width: 135px;
+      @media screen and (max-width: @tablet-screen) {
+        min-width: 115px;
+        .ant-btn {
+          padding: 5px;
+          height: auto;
+         
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../../style/vars.less';
+
+
+.subscription-block {
+  max-width: 380px;
+  text-align: center;
+  margin: 15px auto;
+  padding: 0 15px;
+
+  :global h4 {
+    font-size: 16px;
+    color: @primary-color;
+    font-weight: bold;
+  }
+
+  :global ul {
+    padding-left: 18px;
+
+    li {
+      text-align: left;
+
+      .anticon {
+        color: @success-color;
+      }
+    }
+  }
+
+  @media screen and (max-width: @mobile-screen) {
+    h4 {
+      font-size: 14px;
+    }
+
+    ul li {
+      font-size: 11px;
+    }
+  }
+}

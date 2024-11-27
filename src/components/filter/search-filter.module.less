@@ -1,0 +1,49 @@
+@import '../../../style/vars.less';
+
+.filter-main {
+  padding: 10px 0;
+  display: flex;
+  position: fixed;
+  top: 10%;
+  right: 16%;
+  background-color: lightgoldenrodyellow;
+  @media screen and (max-width: @tablet-screen) {
+    top: 6%;
+    right: 2%;
+  }
+  .ant-select,
+  .ant-input,
+  .ant-input-affix-wrapper {
+    border-bottom: 1px solid @white;
+    &:hover {
+      border-color: @primary-color;
+    }
+  }
+  .border-radius-0 {
+    border-radius: 0px;
+  }
+  .ant-input-search {
+    .ant-input {
+      height: 30px;
+    }
+    .ant-input-group-addon {
+      display: none;
+    }
+  }
+  .custom-col {
+    justify-content: flex-end;
+    align-self: end;
+    .ant-btn {
+      width: 100%;
+      background-color: @primary-color;
+      border-color: @white;
+      color: @black;
+      &:hover {
+        border-color: @primary-color;
+      }
+    }
+  }
+}
+.ant-row-search{
+  margin: 0 !important;
+}

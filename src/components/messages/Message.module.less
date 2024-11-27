@@ -1,0 +1,79 @@
+@import '../../../style/vars.less';
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.message .timestamp {
+  display: flex;
+  justify-content: flex-start;
+  color: @grey-color;
+  font-size: 12px;
+  padding-left: 31px;
+}
+
+.message.mine .timestamp {
+  justify-content: flex-end;
+  padding-left: 0;
+  padding-right: 31px;
+}
+.message .bubble-container {
+  font-size: 14px;
+  display: flex;
+}
+
+.message.mine .bubble-container {
+  justify-content: flex-end;
+}
+
+// .message.start .bubble-container .bubble {
+//   /* margin-top: 10px; */
+//   border-top-left-radius: 20px;
+// }
+
+// .message.end .bubble-container .bubble {
+//   border-bottom-left-radius: 20px;
+//   /* margin-bottom: 10px; */
+// }
+
+// .message.mine.start .bubble-container .bubble {
+//   margin-top: 10px;
+//   border-top-right-radius: 20px;
+// }
+
+// .message.mine.end .bubble-container .bubble {
+//   border-bottom-right-radius: 20px;
+//   margin-bottom: 10px;
+// }
+
+.message .bubble-container .bubble {
+  margin: 5px 0px;
+  background: @light-grey;
+  padding: 10px 15px;
+  border-radius: 10px;
+  max-width: 75%;
+  border-radius: 5px;
+  overflow-wrap: break-word;
+}
+
+.message.mine .bubble-container .bubble {
+  background: @light-color;
+  max-width: 75%;
+  color: @black;
+  overflow-wrap: break-word;
+}
+
+.message-time {
+  font-size: 12px;
+  margin: 0;
+}
+
+.bubble-container .avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin: 6px 8px 0 0;
+}
+.message.mine .bubble-container .avatar {
+  margin: 6px 0 0 8px;
+}

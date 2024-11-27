@@ -1,0 +1,38 @@
+@import './default.less';
+@import './mixin.less';
+
+@media screen and (max-width: @mobile-screen) {
+  .content {
+    padding-top: 65px;
+  }
+  .ant-layout-content {
+    min-height: calc(100vh - 100px);
+  }
+  .main-footer {
+    font-size: 12px;
+  }
+  .mobile-search-bar {
+    width: 100%;
+    padding: 5px;
+  }
+  .ant-btn.info,
+  .ant-btn.secondary-custom{
+    margin-bottom: 5px;
+  }
+  .ant-table-thead > tr > th, .ant-table-tbody > tr > td, .ant-table tfoot > tr > th, .ant-table tfoot > tr > td{
+    padding: 10px 5px;
+  }
+  .switch-grp{
+    margin-bottom: 10px;
+  }
+  textarea:focus, input:focus {
+    font-size: 16px!important;
+  }
+
+  @media (max-width: @mobile-screen) {
+    .hide-mobile {
+      display: none !important;
+    }
+  }
+}
+

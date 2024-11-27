@@ -1,0 +1,125 @@
+@import '../../../style/vars.less';
+
+.notification-menu {
+  width: 350px;
+  @media screen and (max-width: @mobile-screen) {
+    width: 300px;
+  }
+  a {
+    float: right;
+  }
+  h3 {
+    font-weight: bold;
+    float: left;
+    margin: 3px;
+  }
+  :global .ant-menu-item {
+    height: 75px;
+    overflow: hidden;
+    border-bottom: 0.5px solid #ccc;
+
+    .ant-card-meta-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  :global .ant-menu-item:last-child {
+    border-bottom: none;
+  }
+
+  :global .notification-item {
+    display: flex;
+
+    .notification-item-list {
+      line-height: 18px;
+
+      .message {
+        white-space: normal;
+        line-height: 20px;
+      }
+
+      .time {
+        line-height: 20px;
+        small {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .notification-docw {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #7b5dbd;
+      right: 8px;
+      border-radius: 50%;
+      top: 25px;
+    }
+
+  }
+
+  :global .notification-unread {
+    // background-color: rgba(206, 206, 206, 0.24);
+    .message {
+      font-weight: bold;
+    }
+  }
+
+  :global .notification-read {
+    // background-color: rgba(206, 206, 206, 0.082);
+    color:fade(@gray, 70%);
+  }
+  :global .ant-dropdown-menu-item-group-title {
+    border-bottom: 1px solid @normal-color;
+    overflow: hidden;
+    padding: 5px 15px;
+  }
+  :global .ant-dropdown-menu-item-group-list{
+    padding: 8px;
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+    margin: 0;
+    margin-bottom: 37px;
+    
+  }
+  :global .ant-dropdown-menu-item{
+    border-radius: 5px;
+    padding: 10px;
+  }
+  :global .ant-row .ant-col{
+    padding-top: 0;
+    padding-bottom: 0;
+    flex: none;
+    max-width: none;
+    &.ant-col-md-3 {
+     padding-right: 0 !important;
+     width: 40px;
+    }
+    &.ant-col-md-21 {
+      padding-right: 25px !important;
+      width: calc(100% - 40px);
+     }
+  }
+}
+
+.btn-dismiss-read-all {
+  padding: 5px;
+  border-color: white;
+  color: @primary-color;
+  float: right;
+  &:hover {
+    border-color: white;
+  }
+}
+.see-all-notification {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--bg-white);
+  border-top: 1px solid @light-grey;
+  font-weight: bold;
+}

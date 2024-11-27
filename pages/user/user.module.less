@@ -1,0 +1,30 @@
+@import '../../style/vars';
+@import '../../style/default';
+
+
+.user-account {
+  :gloabl .ant-tabs-nav-wrap {
+    margin: 1em 0
+  }
+
+  :global .ant-tabs-tab.ant-tabs-tab-active {
+    color: @primary-color  !important;
+  }
+
+  :global .ant-tabs-nav .ant-tabs-tab {
+    font-size: 16px;
+    font-weight: 600;
+    color: @black;
+  }
+
+  :global .ant-form-item-explain {
+    margin-top: 5px;
+    .ant-form-item-explain-error {
+      color: #f04134;
+    }
+  }
+
+  @media screen and (max-width: @tablet-screen) {
+    padding: 5px;
+  }
+}

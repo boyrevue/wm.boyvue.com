@@ -1,0 +1,56 @@
+@import '../../../../style/vars.less';
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  @media screen and (max-width: @large-screen) {
+    display: none;
+  }
+  :global {
+    .ant-input-group {
+      position: relative;
+      .ant-input-affix-wrapper {
+        .ant-input {
+          height: 27px;
+          background-color: transparent;
+          width: calc(100% - 40px);
+        }
+      }
+    }
+    .ant-input-affix-wrapper {
+      border-radius: 5px !important;
+      border: 0;
+      background-color: @light-grey;
+    }
+    .ant-input-group-addon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: auto !important;
+      width: auto;
+      z-index: 10;
+      background-color: transparent;
+      .ant-input-search-button {
+        height: 38px;
+        border: 0;
+        background-color: transparent;
+      }
+    }
+    
+  }
+  @media (max-width: @tablet-screen) {
+    width: 100%;
+  }
+}
+.button-search {
+  display: none;
+  font-size: 20px;
+  padding: 5px 7px;
+  background-color: #eee;
+  border-radius: 5px;
+  @media screen and (max-width: @large-screen) {
+    display: block;
+  }
+}

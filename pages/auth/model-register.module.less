@@ -1,0 +1,51 @@
+@import '../../style/vars.less';
+
+.register-box {
+  [class~="ant-select-selector"] {
+    height: 40px;
+
+    [class~="ant-select-selection-item"] {
+      line-height: 40px;
+    }
+  }
+
+  .register-form {
+
+    .model-photo-verification {
+      [class~="ant-form-item-control"] {
+        text-align: left;
+      }
+
+      [class~="ant-form-item-label"] {
+        font-weight: 600;
+      }
+    }
+
+    .id-block {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+
+      .img-id {
+        max-width: 50%;
+        width: 100px;
+        @media (max-width: @smaller-screen) {
+          width: 80px;
+        }
+      }
+    }
+    :global .upload-card-register {
+      background-color: #f7f7f7;
+      padding: 15px;
+      border-radius: 5px;
+      :global .ant-form-item-label > label {
+        font-size: 13px;
+      }
+      :global .ant-form-item-control {
+        padding-bottom: 0;
+      }
+    }
+  }
+  
+}
