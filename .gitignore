@@ -31,3 +31,4 @@ package-lock.json
 *.lock
 obfuscatordist/.next/cache/
 dist/.next/cache/
+dist/.next/cache/
