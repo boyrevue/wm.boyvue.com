@@ -30,3 +30,4 @@ yarn-error.log*
 package-lock.json
 *.lock
 obfuscatordist/.next/cache/
+dist/.next/cache/
